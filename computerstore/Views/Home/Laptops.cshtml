@@ -1,7 +1,32 @@
 ﻿
 @{
     ViewData["Title"] = "Laptops";
+    Layout = "~/Views/Shared/_AddLayout.cshtml";
 }
 
 <h1>@ViewData["Message"]</h1>
 <h3>@ViewData["saleMessage"]</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>RAM</th>
+            <th>Price</th>
+            <th>Screen</th>
+            <th>Weight</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Laptop rig in Model)
+        {
+            <tr>
+                <td>@rig.Name</td>
+                <td>@rig.Ram</td>
+                <td>@($"{rig.Price:C2}")</td>
+                <td>@rig.Screen inches</td>
+                <td>@rig.Weight pounds</td>
+            </tr>
+        }
+    </tbody>
+</table>

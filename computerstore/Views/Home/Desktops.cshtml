@@ -1,14 +1,32 @@
 ﻿
 @{
     ViewData["Title"] = "Desktops";
+    Layout = "~/Views/Shared/_AddLayout.cshtml";
+    SiteData globals = new SiteData();
 }
 
 <h1>@ViewData["Message"]</h1>
 
-<ul>
-    @foreach(string prod in Model)
-    {
-        <li>@prod</li>
-    }
-</ul>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>RAM</th>
+            <th>Price</th>
+            <th>Price with tax</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Desktop rig in Model)
+        {
+            <tr>
+                <td>@rig.Name</td>
+                <td>@rig.Ram</td>
+                <td>@($"{rig.Price:C2}")</td>
+                <td>@($"{rig.Price * (globals.tax + 1):C2}")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h3>Onsite setup will cost an additional @($"{globals.setup:C2}")</h3>
 

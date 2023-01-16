@@ -240,3 +240,4 @@ F:\Work\Personal Portfolio\Dotnet\computerstore\computerstore\obj\Debug\net6.0\r
 F:\Work\Personal Portfolio\Dotnet\computerstore\computerstore\obj\Debug\net6.0\computerstore.pdb
 F:\Work\Personal Portfolio\Dotnet\computerstore\computerstore\obj\Debug\net6.0\computerstore.genruntimeconfig.cache
 F:\Work\Personal Portfolio\Dotnet\computerstore\computerstore\obj\Debug\net6.0\ref\computerstore.dll
+F:\Work\Personal Portfolio\Dotnet\computerstore\computerstore\obj\Debug\net6.0\scopedcss\Views\Shared\_AddLayout.cshtml.rz.scp.css

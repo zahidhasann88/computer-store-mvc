@@ -1,0 +1,38 @@
+﻿@model OrderItem;
+@{
+    ViewData["Title"] = "OrderForm";
+}
+
+<h1>OrderForm</h1>
+<form asp-action="OrderForm" method="post">
+    <div asp-validation-summary="All"?></div>
+    <label asp-for="Processor" class="form-label">Select Processor</label>
+    <select asp-for="Processor" class="form-select">
+        <option value="">Processor</option>
+        <option value="i3">intel i3</option>
+        <option value="i5">intel i5</option>
+        <option value="i7">intel i7</option>
+    </select>
+    <span asp-validation-for="Processor" class="text-danger"></span>
+    <div class="mb-3">
+    <label asp-for="RAM" class="form-label">Select Ram</label>
+    <input asp-for="RAM" type="number" class="form-control" default="0"/>
+    <span asp-validation-for="RAM" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+     <label asp-for="Speed" class="form-label">Select Speed</label>
+    <input  asp-for="Speed" type="number" class="form-control" min="2" max="4" step=".1"/>
+    <span asp-validation-for="Speed" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+     <label asp-for="HDSize" class="form-label">Select Hard Drive TB</label>
+    <input  asp-for="HDSize" type="number" class="form-control" min=".5" max="4" step=".5"/>
+    <span asp-validation-for="HDSize" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+     <label asp-for="Email" class="form-label">Your Email</label>
+    <input asp-for="Email" type="text" class="form-control" placeholder="name@company.com"/>
+    <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Order the Computer</button>
+</form>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<computerstore.Models.OrderItem>;
+@{
+    ViewData["Title"] = "All Orders";
+}
+
+<h1>All Orders Placed</h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>Customer Email</th>
+        <th>Processor</th>
+        <th>Speed</th>
+        <th>RAM</th>
+        <th>HD Size</th>
+    </tr>
+    @foreach(OrderItem order in Model)
+    {
+        <tr>
+            <td>@order.Email</td>
+            <td>@order.Processor</td>
+            <td>@order.Speed</td>
+            <td>@order.RAM</td>
+            <td>@order.HDSize</td>
+        </tr>
+    }
+</table>
